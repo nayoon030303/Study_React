@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ul{
+            font-weight: 900;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <ul class="ul">출력 방법
+                <li>1.alert()</li> 
+                <li>2.document.write()</li> 
+                <li>3.console.log()</li> 
+                <li>4.innerHTML</li> 
+            </ul>
+        </li>
+        <li>
+            <ul>
+                <li><script>
+                    let result = document.baseURI;
+                    document.write(result);
+                    result = document.URL;
+                    document.write("<br>"+result);
+                    console.log(document.baseURI);
+                </script>
+                </li>
+            </ul>
+        </li>
+
+
+    </ul>
+</body>
+</html>
