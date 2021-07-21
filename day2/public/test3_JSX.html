@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatiable" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html 문서 안에 react 삽입하기 : JSX 문법-컴포넌트</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <style>
+      h1{
+        color: pink;
+      }
+
+      .top{
+        color: skyblue;
+        border: 2px solid coral;
+        border-radius: 10px 10px;
+      }
+
+      .content{
+        background-color: cornflowerblue;
+        text-align: center;
+        color: lightcyan;
+        font-size: 25px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+      var h1style = {"style":{"color":"skyblue"}};
+      var divborder = {"style":{"border":"pink 2px solid"}}
+
+      let title = "JSX문법의 표현식";
+
+      let content = {
+                title: "제목",
+                description: "내용을 작성하는 부분"
+            };
+      
+      // ----------- 컴포넌트(부분기능)
+      const Book =() =>{ // 단축법
+        return(
+          <div className = "row">
+            <h2>My Book</h2>
+          </div>
+        );
+      }
+
+      function BookTitle(){
+        return <h1>My Book</h1>
+      }
+
+      const BookFooter = ()=>{
+        return (
+          <h2>
+            CopyRight(C) by Pokemon World
+          </h2>
+        );
+      }
+          
+      ReactDOM.render(
+        <div className = "container mb-2">
+          <BookTitle />
+          <div>
+            <div className = "row">
+              <div className = "col-10">
+                <h2 className="top">{title}</h2>
+              </div>
+            </div>
+          </div>
+
+          <div className = "row">
+            <div className = "col-2">
+              <h1>{content.title}</h1>
+            </div>
+            <div className = "col-8">
+              <h1>{content.description}</h1>
+            </div>
+          </div>
+
+          <div className = "row">
+            <div className = "col-2">
+              <h2 className="top">react</h2>
+            </div>
+            <div className = "content col-8">
+              facebook에서 만든 프론트단 UI라이브러리이다.
+            </div>
+          </div>
+      
+          <div className = "row">
+            <div className = "col-2">
+              <h2 className="top">Spring</h2>
+            </div>
+            <div className = "content col-8">
+              Java 서버 구현시 사용하는 에플리케이션
+            </div>
+          </div>
+
+          <h1>JSX문법</h1>
+          <h2>JS문법</h2>
+          <h3>css VS BootStrap</h3>
+
+          <BookFooter />
+        </div>
+        ,
+        document.getElementById("root") // 위치
+      );
+    </script>
+  </body>
+</html>

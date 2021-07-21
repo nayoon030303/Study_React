@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <style>
+      h1{
+        color: pink;
+      }
+
+      .top{
+        color: skyblue;
+        border: 2px solid coral;
+        border-radius: 10px 10px;
+      }
+
+      .content{
+        background-color: cornflowerblue;
+        text-align: center;
+        color: lightcyan;
+        font-size: 25px;
+        margin: 5px;
+      }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script 76type="text/babel">
+        
+        function Food(props){
+            return(
+                <h1>I like {props.menu}</h1>
+            )
+        }
+
+        function App(){
+            return(
+                <>
+                    <h1>food</h1>
+                    <Food menu="kimchi"/>
+                    <Food menu="pizza"/>
+                    <Food menu="chicken"/>
+                </>
+            )
+        }
+
+        ReactDOM.render(<div><App/></div>,
+        document.getElementById("root"));
+    </script>
+</body>
+</html>
