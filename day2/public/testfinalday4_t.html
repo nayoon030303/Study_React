@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React  class 컴포넌트만들기 </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        h1{
+            color:blue;
+            border:1px dotted red;
+            margin-left: 15px;
+        }
+        h2{           
+           color:brown;
+           border: darkmagenta 2px solid;
+           border-radius: 10px 0;
+        }
+        h3{
+            color:darkgreen;
+            background-color: darkseagreen;
+        }
+    </style>
+<script src= " https://unpkg.com/@babel/standalone/babel.min.js" ></script>  
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <div id = "root"></div>
+    <script type = "text/babel">
+    let title="JSX 표현식";
+    let content ={
+          title : "제  목",
+          describe:"  내용을 작성"
+    };
+  function BookTitle(){
+      return (
+          <div className = "row">
+            <h1>My Book</h1>
+          </div>
+      );
+  }
+  function BookFooter(){
+      return (
+          <div className = "row">
+            <h1>CopyRight(C) by mirim 3_A</h1>
+          </div>
+      );
+  }
+  const BookFooter1=()=><h3>서울시 관악구 관악동 1000번지</h3>;
+  const BookFooter2=()=>{
+           return(<h3>미림정보과학고등학교</h3>);
+  }; 
+  class BookList extends React.Component{  
+
+    state={
+        theme:'white'
+    }
+      render(){
+          return(
+              <>
+                <div style={{fontSize:'30px'}}>
+                    {this.state.theme =='white'?'blue':'white'}
+                </div>
+                <div>
+                    <button onClick={()=>{this.setState({theme:'blue'});}}>메롱</button>
+                </div>
+               <BookCard title ="spring"  content = "server Framwork" price ={333}/> 
+                <BookCard title ="react"  content = "UI library" price ={333} />  
+              </>
+          );
+      }
+  }  
+  function BookListif(props){  //           
+             if(props.sort=="ASC") { 
+                 return(       
+                <>  <BookCard title ="spring"  content = "server Framwork" price ={333}/> 
+                    <BookCard title ="react"  content = "UI library" price ={333} />
+                </> 
+                 );       
+            }else{
+                return(
+                <>  
+                    <BookCard title ="react"  content = "UI library" price ={333} />  
+                    <BookCard title ="spring"  content = "server Framwork" price ={333}/>               
+                </>  
+                );
+            }     
+  }  
+function BookCard({title, content, price}){
+    return(
+        <div className ="container mb-2">              
+                <div className = "row">
+                    <div><h1>{content.title}</h1></div>
+                    <div><h1>{content.describe}</h1></div>
+                    </div>
+                <div className ="row">
+                    <div className ="col-2 color">
+                        <h2>{title}</h2>
+                    </div>
+                    <div className ="col-8">
+                        <h3>{content}</h3>
+                        <h3>{ price+ '원'}</h3>
+                    </div>
+                </div>
+             </div>
+    );
+}
+function BookApp1(){
+    return(
+        <>
+            <BookTitle />
+            <BookList sort="DESC" />  
+            <BookListif sort="DESC" />             
+            <BookFooter />
+            <BookFooter1 />
+            <BookFooter2 />
+        </> 
+    );
+}
+class BookApp extends React.Component{
+    render(){
+        return(
+            <>
+            <BookTitle />
+            <BookList sort="DESC" />  
+            <BookListif sort="DESC" />             
+            <BookFooter />
+            <BookFooter1 />
+            <BookFooter2 />
+           </>    
+        );    
+   }
+}
+ ReactDOM.render(
+   <BookApp />
+    ,
+    document.getElementById("root")
+    );    
+</script>
+</body>
+</html>
