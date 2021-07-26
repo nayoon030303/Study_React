@@ -2,6 +2,20 @@
   text-align: center;
 }
 
+.nav{
+  background: black;
+  width: 100%;
+  color: white;
+  font-weight: 900;
+  font-size: 30px;
+}
+
+.list{
+  font-size: 30px;
+}
+
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
