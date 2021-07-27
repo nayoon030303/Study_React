@@ -2,29 +2,6 @@
   text-align: center;
 }
 
-.nav{
-  text-align: center;
-  background: pink;
-  width: 100%;
-  color: white;
-  padding: 15px;
-  font-weight: bold;
-  font-size: 22px;
-}
-
-.list{
-  text-align: center;
-  padding: 5px;
-}
-
-.modal{
-  margin: 10px;
-  text-align: center;
-  border: 5px solid rgb(203, 240, 255);;
-
-}
-
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
