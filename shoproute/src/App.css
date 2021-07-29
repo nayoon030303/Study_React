@@ -2,13 +2,12 @@
   text-align: center;
 }
 
-.jumbotone{
-  background: cyan;
-  background-image: url('https://cdn.iconsumer.or.kr/news/photo/202101/14546_18858_3032.jpg');
+.background{
+  background-size: cover;
   width: 100%;
-  text-align: center;
-  height: 500px;
-  color: white;
+  height: 200px;
+  background-image: url('http://thumb.ad.co.kr/article/54/0e/21/52/i/146770-1.jpg');
+  color:white;
 }
 
 .App-logo {

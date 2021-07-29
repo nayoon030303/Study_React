@@ -3,6 +3,7 @@ import './App.css';
 import { Button,Navbar,Container, NavDropdown, Nav  } 
       from 'react-bootstrap';
 import {name, name2} from './data0.js';
+import {Link, Route,Router,Switch} from 'react-router-dom';
 
 function App() {
 
@@ -68,6 +69,8 @@ function App() {
       </div>
       <h1>{name}</h1>
       <h1>{name2}</h1>
+      <Router path="/">이곳은 메인 페이지입니다. 즐거운 시간되세요</Router>
+      <Router path="/">상세페이지입니다.</Router>
       <div className="container">
         <div className="row" style={{paddingTop: "30px"}}>
 
