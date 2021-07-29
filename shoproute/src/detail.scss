@@ -1,0 +1,64 @@
+@import './reset.scss';
+
+@mixin 함수() {
+    background: lightpink;
+    padding: 20px;
+    border-radius: 5px;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 5000px;
+}
+
+$메인칼라: #ff0000;
+
+
+
+
+.myalert {
+    @include 함수();
+}
+
+.myalert p {
+    margin-bottom: 0;
+}
+
+
+
+.myalert2 {
+    @extend .myalert;
+    background: darkseagreen;
+}
+
+.myalert3 {
+    @extend .myalert;
+}
+
+.myalert4 {
+    @extend .myalert;
+    background: lightblue;
+}
+
+
+
+
+
+.sass1 {
+    color: $메인칼라;
+}
+
+div.container h3 {
+    color: blue;
+}
+
+div.container p {
+    color: green;
+}
+
+div.container {
+    h4 {
+        color: red;
+    }
+    p {
+        color: white;
+    }
+}

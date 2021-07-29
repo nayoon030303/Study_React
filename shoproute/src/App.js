@@ -9,22 +9,22 @@ function App() {
 
   let shoes=[
     { id:0,
-      name:'나이키1999',
-      src :"https://codingapple1.github.io/shop/shoes1.jpg" ,
-      content:'폭신폭신 운동화',
+      name:'체리블라썸 라때 ',
+      src :"https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F99FC5E505C92160209" ,
+      content:'New Cherry Blessams',
       price: 33000
     },
     { id:1,
-      name:'아디다스33',
-      src :"https://codingapple1.github.io/shop/shoes2.jpg" ,
-      content:'삐까뻔쩍 운동화',
+      name:'피치레몬블렌디드',
+      src :"https://cdnweb01.wikitree.co.kr/webdata/editor/202005/06/img_20200506085034_940524b3.webp" ,
+      content:'2021.05 NEW',
       price: 4500
     },
     {
       id:2,
-      name:'black&pink',
-      src :"https://codingapple1.github.io/shop/shoes3.jpg" ,
-      content:'main in korea',
+      name:'초코릿 크림 칩 프라프치노',
+      src :"https://ssproxy.ucloudbiz.olleh.com/v1/AUTH_e59809eb-bdc9-44d7-9d8f-2e7f0e47ba91/post_card/38996_1534917447_dLxOyz3k.jpg" ,
+      content:'sweet chocolate',
       price: 5300
 
   }];
@@ -61,7 +61,7 @@ function App() {
       
       <Route exact path="/">
         <div>
-        <Button variant="warning" onClick={()=>{history.goBack();}}>이전화면</Button>
+        <Button variant="warning" onClick={()=>{history.goBack();}}>이전화면</Button> &nbsp;
         <Button variant="warning" onClick={()=>{history.push('/detail');}}>상세페이지</Button>
           <h1>Main Page~</h1>
           <div className= "background">
@@ -72,32 +72,16 @@ function App() {
             </p>
           </div>
 
-          <div className="container">
+          
+        <hr/>
+        <div className="container"> 
           <div className = "row">
-            <div className = "col-md-4">
-                <img src ="https://codingapple1.github.io/shop/shoes1.jpg" width="100%"/>
-                <h3>상품명</h3>
-                <h3>상품설명:</h3>
-            </div>
-            <div className = "col-md-4">
-                <img src ="https://codingapple1.github.io/shop/shoes2.jpg" width="100%" /> 
-                <h3>상품명</h3>
-                <h3>상품설명:</h3>
-            </div>
-            <div className = "col-md-4">
-                <img src ="https://codingapple1.github.io/shop/shoes3.jpg" width="100%" /> 
-                <h3>상품명</h3>
-                <h3>상품설명:</h3>
-            </div>
-              
+            <Card  shoes ={shoes[0]}/>
+            <Card  shoes ={shoes[1]}/>
+            <Card  shoes ={shoes[2]}/>
           </div>
         </div>
-        <hr/>
-        <div className = "row">
-          <Card  shoes ={shoes[0]}/>
-          <Card  shoes ={shoes[1]}/>
-          <Card  shoes ={shoes[2]}/>
-        </div>
+        
         <hr/>
         <div className="container">
           <div className="row">

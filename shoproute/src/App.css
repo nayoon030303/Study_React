@@ -3,11 +3,17 @@
 }
 
 .background{
+  padding-top: 100px;
   background-size: cover;
   width: 100%;
-  height: 200px;
-  background-image: url('http://thumb.ad.co.kr/article/54/0e/21/52/i/146770-1.jpg');
+  height: 400px;
+  background-image: url('https://image-cdn.hypb.st/https%3A%2F%2Fkr.hypebeast.com%2Ffiles%2F2021%2F01%2Funique-starbucks-stores-2020-opened-to-visit-yangpyeong-hangang-busan-haeundae-01-1.jpg?w=1600&cbr=1&q=90&fit=max');
   color:white;
+}
+
+img{
+  width: 300px;
+  height: 300px;
 }
 
 .App-logo {
